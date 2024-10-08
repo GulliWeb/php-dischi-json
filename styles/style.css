@@ -1,17 +1,108 @@
+/* Reset */ 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Generics */
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+img{
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+/* Cards */
 .card-wrapper{
     margin: 50px auto;
-    max-width: 700px;
-    border: 1px solid red;
+    width: 1000px;
+
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .card{
+    max-width: calc(100% / 3 -15px);
     min-height: 100px;
-    max-width: 150px;
-    border: 1px dashed blue;
+
+    background-color: transparent;
+    color: white;
+    border: none;
+
+    overflow: hidden;
+
+    transition: border 0.3s ease; 
+    border: 2px solid transparent; 
+
+    animation: border-animation 5s infinite;
+
 }
+
+.card:hover {
+    cursor: pointer;
+    border: 2px solid #23d5ab; 
+    box-shadow: 0 0 20px rgba(35, 213, 171, 0.5); 
+}
+
+@keyframes border-animation {
+    0% {
+        border-color: #ee7752;
+    }
+    50% {
+        border-color: #e73c7e;
+    }
+    100% {
+        border-color: #23a6d5;
+    }
+}
+
+.card h2{
+    font-size: 20px;
+}
+
+.card p{
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+.card figure{
+    margin: 0 auto;
+    width: 250px;
+    border-radius: 12px;
+}
+
+.card .bottom-card{
+    padding-top: 10px;
+}
+
+/* Layer nero */
+#app{
+    position: relative;
+    bottom: 13px;
+    height: 99.5vh;
+    width: 1000px;
+    margin: 0 auto;
+    background-color: #000;
+}
+
