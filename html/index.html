@@ -19,7 +19,7 @@
         <h1 class="text-center fs-1 fw-bold text-white mt-3">ALBUMS</h1>
         <div class="card-wrapper d-flex ">
             <!-- Mostro dinamicamente le card e i suoi contenuti presi nell'array DISCHI popolato con la chiamata Axios. -->
-            <div class="card" v-for="(disco, index) in dischi" :key="index" @click="getCurrentInfo">
+            <div class="card" v-for="(disco, index) in dischi" :key="index" @click="getCurrentInfo(index)">
                 <figure id="img-wrapper">
                     <img :src="disco.poster" alt="poster">
                 </figure>
@@ -28,6 +28,24 @@
                     <p> {{ disco.author }}</p>
                     <p class="fw-bold"> {{ disco.year }}</p>
                 </div>
+            </div>
+
+            <!-- Sezione overlay che mostra le info della card cliccata al suo click -->
+            <div v-if="currentDisk" class="overlay" @click="hideOverlay">
+                <div class="overlay-content" @click.stop>
+                    <div class="info">
+                        <h2 class="fs-1">Dettagli Disco:</h2>
+                        <p class="fs-2">Genre: {{ currentDisk.genre }}</p>
+                        <p class="fs-2 ">Title: {{ currentDisk.title }}</p>
+                        <p class="fs-2">Author: {{ currentDisk.author }}</p>
+                        <p class="fs-2">Year: {{ currentDisk.year }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Andrea Gulli -->
+            <div class="andrea-gulli fs-3 fw-bold text-white mt-5">
+                Made with &hearts; by Andrea Gulli
             </div>
         </div>
     </main>
