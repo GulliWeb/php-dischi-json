@@ -19,7 +19,7 @@
         <h1 class="text-center fs-1 fw-bold text-white mt-3">ALBUMS</h1>
         <div class="card-wrapper d-flex ">
             <!-- Mostro dinamicamente le card e i suoi contenuti presi nell'array DISCHI popolato con la chiamata Axios. -->
-            <div class="card" v-for="(disco, index) in dischi" :key="index">
+            <div class="card" v-for="(disco, index) in dischi" :key="index" @click="getCurrentInfo">
                 <figure id="img-wrapper">
                     <img :src="disco.poster" alt="poster">
                 </figure>
