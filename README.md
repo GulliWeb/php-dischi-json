@@ -20,7 +20,7 @@ PHP Dischi is a backend web application that allows users to browse and manage a
 
 ### 🎥 Demo Video
 
-Watch the project demo here: [PHP Dischi Demo]([https://vimeo.com/manage/videos/1017164291](https://vimeo.com/manage/videos/1017602776)) 🎬
+Watch the project demo here: (https://vimeo.com/manage/videos/1017602776](https://vimeo.com/manage/videos/1017602776) 🎬
 
 ## Installation
 
