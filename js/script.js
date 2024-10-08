@@ -12,7 +12,8 @@ createApp({
         getDisc(){
             axios.get('http://localhost:8888/php-dischi-json/dischi.json')
             .then((response) => {
-              console.log(response);
+              this.dischi = response.data
+              console.log(this.dischi);
             })
             .catch(function (error) {
               console.log(error);

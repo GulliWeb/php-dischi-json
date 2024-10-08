@@ -15,12 +15,12 @@
 <body>
     <main id="app">
         <div class="card-wrapper">
-            <div class="card">
-                <img src="" alt="">
+            <div class="card" v-for="(disco, index) in dischi" :key="index">
+                <img :src="disco.poster" alt="">
                 <div class="bottom-card">
-                    <h2></h2>
-                    <p></p>
-                    <p></p>
+                    <h2>{{ disco.title }}</h2>
+                    <p> {{ disco.author }}</p>
+                    <p> {{ disco.year }}</p>
                 </div>
             </div>
         </div>
