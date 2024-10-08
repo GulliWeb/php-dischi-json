@@ -127,6 +127,10 @@ img{
     z-index: 1001e; 
 }
 
+.overlay span{
+    font-family: cursive;
+}
+
 /* Layer nero */
 #app{
     position: relative;
